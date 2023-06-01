@@ -25,7 +25,7 @@ function bubbleSort(arr) {
     const len=arr.length;
     //write the basic for loop.
     for (let i=0; i<len; i++) {
-        for (let j=0; j<len; j++){ //this two loops will make sure that all elements have been sorted in the array.
+        for (let j=0; j<len-i-1; j++){ //this two loops will make sure that all elements have been sorted in the array.
             if(arr[j]>arr[j+1]){
                 //then swap those elemnts.
                 //to make sure the elements to be swapped is not lost
@@ -84,7 +84,7 @@ let ARRAY=[9,8,7,6,5,4,3,2,1];
 function bubbleSort1(arr1){
     let len1=arr1.length;
     for(let i=0; i<len1; i++){
-        for(let k=0; k<len1; k++){
+        for(let k=0; k<len1-i-1; k++){
             if(arr1[k]>arr1[k+1]){
                 let temp2=arr1[k];
                 arr1[k]=arr1[k+1];
