@@ -98,4 +98,4 @@ console.log("The unsorted array is :" + ARRAY);
 
 //sorted array.
 let sortedArray =bubbleSort1(ARRAY);
-console.log(sortedArray);
+console.log("The sorted array is :"+sortedArray);
