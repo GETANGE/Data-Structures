@@ -99,3 +99,24 @@ console.log("The unsorted array is :" + ARRAY);
 //sorted array.
 let sortedArray =bubbleSort1(ARRAY);
 console.log("The sorted array is :"+sortedArray);
+
+
+//EXAMPLE 3 : arr2=[5,1,3,8,9]
+let arr2=[5,1,3,8,9]
+function bubbleSort2(arr2){
+    let len=arr2.length;
+    for(let i=0;i<len;i++){
+        for(let j=0;j<len-i-1;j++){
+            if(arr2[j]>arr2[j+1]){
+                let temp=arr2[j];
+                arr2[j]=arr2[j+1];
+                arr2[j+1]=temp;
+            }
+        }
+    }
+    return arr2;
+}
+
+console.log("The unsorted array in example3 is :"+arr2)
+let example3=bubbleSort2(arr2);
+console.log("The sorted array in example3 is :"+example3);
