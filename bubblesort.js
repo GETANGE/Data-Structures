@@ -120,3 +120,24 @@ function bubbleSort2(arr2){
 console.log("The unsorted array in example3 is :"+arr2)
 let example3=bubbleSort2(arr2);
 console.log("The sorted array in example3 is :"+example3);
+
+
+let arr3=[7,3,9,5,10,87]
+
+function bubbleSort3(arr3){
+    let len=arr3.length;
+    for(let i=0; i<len; i++){
+        for(let j=0; j<len-i-1; j++) {
+            if(arr3[j]>arr3[j+1]) {
+                var temp=arr3[j]
+                arr3[j] = arr3[j+1];
+                arr3[j+1] = temp;
+            }
+        }
+    }
+    return arr3;
+}
+
+console.log("The array of example4 unsorted:"+" "+arr3);
+let example4=bubbleSort3(arr3);
+console.log("The array of example4 after sorting:"+" "+example4);
