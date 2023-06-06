@@ -39,7 +39,7 @@ function bubbleSort(arr) {
     return arr;
 }
 bubbleSort(arr);
-console.log(arr);
+console.log("The array after sorting is :"+" "+arr);
 
 //EXAMPLE 2: ARRAY=[9,8,7,6,5,4,3,2,1]
 // ARRAY=[8,9,7,6,5,4,3,2,1]
