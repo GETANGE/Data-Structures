@@ -35,7 +35,7 @@ function selectionSort2(arr) {
   for(let i = 0; i < len; i++) {
     let minIndex=i;//assumption.
 
-    for(let j = 0; j < len; j++) {
+    for(let j = i+1; j < len; j++) {
       if(arr[j]<arr[minIndex]){
         minIndex = j;//then j contains the minimal element index
       }
