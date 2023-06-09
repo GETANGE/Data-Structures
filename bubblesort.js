@@ -163,3 +163,32 @@ function bubbleSort4(arr){
 console.log("The unsorted erray of example 5 is : " +array5);
 let sortedArray5=bubbleSort4(array5);
 console.log("The sorted array of example 5 is :"+sortedArray5);
+
+// sum the unsorted array and and return the array when sorted.
+let array6=[3,9,1,4,6,8,2,7]
+
+var ArrayS=[]
+
+for (let i=0; i<array6.length; i++){
+    let number=array6[i];
+    var sum=number+number;
+    ArrayS.push(sum);
+}
+console.log(ArrayS)
+
+function sorting(arr){
+    let len=arr.length;
+    for(let i=0; i<len; i++){
+        for(let j=0; j<len-i-1; j++){
+            if(arr[j]>arr[j+1]){
+                const temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    return arr;
+}
+
+const sort = sorting(ArrayS)
+console.log(sort);
