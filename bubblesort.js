@@ -174,7 +174,7 @@ for (let i=0; i<array6.length; i++){
     var sum=number+number;
     ArrayS.push(sum);
 }
-console.log(ArrayS)
+console.log("The array after squaring the elements is :"+" "+ArrayS)
 
 function sorting(arr){
     let len=arr.length;
@@ -191,4 +191,4 @@ function sorting(arr){
 }
 
 const sort = sorting(ArrayS)
-console.log(sort);
+console.log("The array of squares after sorting is :"+" "+sort);

@@ -22,4 +22,5 @@ function sort(arr){
     }
     return arr
 }
-console.log(sort(SquaredArray))
+let sortedArray=sort(SquaredArray)
+console.log("Sorted square :"+" "+sortedArray);
