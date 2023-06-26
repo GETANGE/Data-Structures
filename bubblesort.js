@@ -192,3 +192,24 @@ function sorting(arr){
 
 const sort = sorting(ArrayS)
 console.log("The array of squares after sorting is :"+" "+sort);
+
+//sort the following algorithm.
+let trial1=[2,8,3,5,7,2,1]
+
+function bubbleSort5(trial){
+    let len = trial.length;
+
+    for(let i=0; i<len; i++){
+        for(let j=0; j<len-i-1; j++){
+            if(trial[j] > trial[j+1]){
+                const temp = trial[j];
+                trial[j] = trial[j+1];
+                trial[j+1] = temp;
+            }
+        }
+    }
+    return trial;
+}
+
+var sorting = bubbleSort5(trial1);
+console.log(sorting);
