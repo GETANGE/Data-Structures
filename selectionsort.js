@@ -8,8 +8,8 @@ function selectionSort(arr) {
       if (arr[j] < arr[indexmin]) { //compares the elements ata indes j with the current minimum index at 'indexmin'.
         indexmin = j;
       }
-
-      else (indexmin !== i) //compares if the index of the minimum element  is different from the current index 'i'.
+    }
+      if (indexmin !== i){ //compares if the index of the minimum element  is different from the current index 'i'.
       // swap
       const temp = arr[indexmin];
       arr[indexmin] = arr[i];
@@ -27,29 +27,29 @@ console.log("The array after selection sort :"+" "+sortedArray);
 
 
 //example 2
-//arr1=[2,5,8,1,0,7]
-let arr1 = [2,5,8,1,0,7]
+let arr1 = [2, 5, 8, 1, 0, 7];
 
 function selectionSort2(arr) {
-  let len = arr.length
-  for(let i = 0; i < len; i++) {
-    let minIndex=i;//assumption.
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+    let minIndex = i; // Assumption.
 
-    for(let j = i+1; j < len; j++) {
-      if(arr[j]<arr[minIndex]){
-        minIndex = j;//then j contains the minimal element index
+    for (let j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j; // Then j contains the minimal element index.
       }
-      else(minIndex !== i);{
-        const temp = arr[minIndex];
-        arr[minIndex] = arr[i];
-        arr[i] = temp;
-      }
+    }
+
+    if (minIndex !== i) {
+      const temp = arr[minIndex];
+      arr[minIndex] = arr[i];
+      arr[i] = temp;
     }
   }
   return arr;
 }
 
-console.log("The array before selection sort is : "+arr1);
+console.log("The array before selection sort is: " + arr1);
 
-const sortedArray2=selectionSort2(arr1);
-console.log("The array after selection sort is : "+sortedArray2);
+const sortedArray2 = selectionSort2(arr1);
+console.log("The array after selection sort is: " + sortedArray2);
