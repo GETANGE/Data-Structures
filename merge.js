@@ -62,7 +62,7 @@ function merge(left, right) {
   let j = 0;
 
   while (i < left.length && j < right.length) {
-    if(left[i]>right[j]){
+    if(left[i]<=right[j]){
       result1.push(left[i]);
       i++;
     }else{
@@ -71,13 +71,13 @@ function merge(left, right) {
     }
   }
 
-  while(i<left.length){
-    result1.push(left[i]);
-    i++;
-  }
   while(j<right.length){
     result1.push(right[j]);
     j++;
+  }
+  while(i<left.length){
+    result1.push(left[i]);
+    i++;
   }
 
   return result1;
