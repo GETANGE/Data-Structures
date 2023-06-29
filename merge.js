@@ -135,3 +135,53 @@ console.log("The array before merge sort:"+array2);
 
 const array2Merged=mergeSort3(array2)
 console.log("The array after merge sort:"+array2Merged);
+
+//geek for geeks example.did not pass test cases
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const mid = Math.floor(arr.length / 2);
+  const left = arr.slice(0, mid);
+  const right = arr.slice(mid);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  let result = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] <= right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
+    }
+  }
+
+  while (i < left.length) {
+    result.push(left[i]);
+    i++;
+  }
+
+  while (j < right.length) {
+    result.push(right[j]);
+    j++;
+  }
+
+  return result;
+}
+
+let arr1 = [1, 3, 5, 7];
+let arr2 = [0, 2, 6, 8, 9];
+let combined = arr1.concat(arr2);
+
+console.log(combined);
+
+let sortedArray2 = mergeSort(combined);
+console.log(sortedArray2);
