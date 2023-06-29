@@ -88,3 +88,50 @@ console.log("The array before sorting is: " + array1)
 
 const sortedArray=mergeSort1(array1);
 console.log("The array after sorting is: " + sortedArray);
+
+
+//example 3
+function mergeSort3(array2){
+  if(array2.length<=1){
+    return array2;
+  }
+
+  const mid=Math.floor(array2.length/2);
+  const left=array2.slice(0,mid);
+  const right=array2.slice(mid);
+
+  return merge(mergeSort3(left),mergeSort3(right));
+}
+
+function merge(left,right){
+  let merge=[];
+  let i=0;
+  let j=0;
+
+  while(i<left.length && j<right.length){
+    if(left[i] <= right[j]){
+      merge.push(left[i]);
+      i++;
+    }else{
+      merge.push(right[j]);
+      j++;
+    }
+  }
+
+  while(i < left.length){
+    merge.push(left[i]);
+    i++;
+  }
+  while(j < right.length){
+    merge.push(right[j]);
+    j++;
+  }
+
+  return merge;
+}
+
+const array2 =[2,7,4,0,3,5,8,9,1];
+console.log("The array before merge sort:"+array2);
+
+const array2Merged=mergeSort3(array2)
+console.log("The array after merge sort:"+array2Merged);
