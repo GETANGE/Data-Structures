@@ -136,7 +136,8 @@ console.log("The array before merge sort:"+array2);
 const array2Merged=mergeSort3(array2)
 console.log("The array after merge sort:"+array2Merged);
 
-//geek for geeks example.did not pass test cases
+//geek for geeks example.
+//Did not pass test cases.
 function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
@@ -179,7 +180,7 @@ function merge(left, right) {
 
 let arr1 = [1, 3, 5, 7];
 let arr2 = [0, 2, 6, 8, 9];
-let combined = arr1.concat(arr2);
+let combined = arr2.concat(arr1);
 
 console.log(combined);
 
