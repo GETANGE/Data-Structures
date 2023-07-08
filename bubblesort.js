@@ -213,3 +213,22 @@ function bubbleSort5(trial){
 
 var sorting = bubbleSort5(trial1);
 console.log(sorting);
+
+let  trial2 =[2,3,79,45,34,21]
+function bubble(trial2){
+    let len = trial2.length;
+
+    for(i=0; i<len; i++){
+        for(j=0; j<len-i-1; j++){
+            if(trial2[j]>trial2[j+1]){
+                const temp = trial2[j];
+                trial2[j]=trial2[j+1];
+                trial2[j+1]=temp;
+            }
+        }
+    }
+    return trial2;
+}
+
+let sorted = bubble(trial2);
+console.log(sorted);
