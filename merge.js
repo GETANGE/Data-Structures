@@ -198,7 +198,7 @@ function mergeSort5(array5){
   let left=array5.slice(0, mid);
   let right=array5.slice(mid);
 
-  return merge(mergeSort5(left, right))
+  return merge(mergeSort5(left),mergeSort5(right));
 }
 
 function merge(left, right) {
