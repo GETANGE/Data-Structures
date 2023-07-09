@@ -186,3 +186,48 @@ console.log(combined);
 
 let sortedArray2 = mergeSort(combined);
 console.log(sortedArray2);
+
+
+//example 5
+function mergeSort5(array5){
+  if(array5.length<=1){
+    return array5;
+  }
+
+  const mid=Math.floor(array5.length/2);
+  let left=array5.slice(0, mid);
+  let right=array5.slice(mid);
+
+  return merge(mergeSort5(left, right))
+}
+
+function merge(left, right) {
+  let result2=[]
+  let i=0;
+  let j=0;
+
+  while (i<left.length && j<right.length) {
+    if(left[i]<=right[j]){
+      result2.push(left[i]);
+      i++;
+    }else{
+      result2.push(right[j]);
+      j++;
+    }
+  }
+
+  while(i < left.length){
+    result2.push(left[i]);
+    i++;
+  }
+  while(j < right.length){
+    result2.push(right[j]);
+    j++;
+  }
+
+  return result2;
+}
+
+let array5=[2,5,8,9,1,0]
+let sortedArray5=mergeSort5(array5)
+console.log(sortedArray5);
