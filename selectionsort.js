@@ -53,3 +53,30 @@ console.log("The array before selection sort is: " + arr1);
 
 const sortedArray2 = selectionSort2(arr1);
 console.log("The array after selection sort is: " + sortedArray2);
+
+//example 3
+let arr2 =[9,3,6,2,8,1,0];
+function selectionSort3(arr){
+  let len=arr.length;
+
+  for(let i=0; i<len; i++){
+    let minindex=i;
+
+    for(let j=i+1; j<len; j++){
+      if(arr[j]<arr[minindex]){
+        minindex=j;
+      }
+    }
+
+    if(minindex != i){
+      const temp=arr[minindex];
+      arr[minindex]=arr[i];
+      arr[i]=temp;
+    }
+  }
+  return arr;
+}
+
+console.log("Array before selection sort"+" : "+arr2);
+let sort=selectionSort3(arr2);
+console.log("Array after selection sort"+" : "+sort);
