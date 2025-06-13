@@ -1,0 +1,17 @@
+Interview questions on functions
+
+Q1 - What is function Declarations.
+    - This is a way of defining a function in javascript using the "function" keyword followed by a name,
+      parameter list in parenthesis, and a block of code in curly braces
+
+Q2 - what is function Expressions.
+    - This is when you define a function and assign it to a varibale.
+    - Unlike function Declarationsc, function Expressions are not hoisted, meaning you cannot call them before they are defined
+
+Q3 - What are First Class Functions
+   - This is when a function in javascript is just treated just like a normal value---such as numbers, strings or objects
+   - This means you can :
+        - Store functions in variables
+        - Pass function as arguments to other functions
+        - Return functions from other functions
+        - Assign functions to object properties (methods)
